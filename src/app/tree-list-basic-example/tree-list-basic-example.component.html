@@ -2,7 +2,8 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="form-group">
-        <pfng-tree-list #treeList
+        <pfng-tree-list>
+          <!-- #treeList
                         [actionTemplate]="actionTemplate"
                         [config]="treeListConfig"
                         [itemTemplate]="itemTemplate"
@@ -13,8 +14,8 @@
                         (onDblClick)="handleDblClick($event)"
                         (onMoveNode)="handleMoveNode($event)"
                         (onToggleExpanded)="handleToggleExpanded($event)"
-                        (onSelectionChange)="handleSelectionChange($event)">
-          <ng-template #loadTemplate let-node="node" let-index="index">
+                        (onSelectionChange)="handleSelectionChange($event)" -->
+          <!--<ng-template #loadTemplate let-node="node" let-index="index">
             <span>Loading...</span>
           </ng-template>
           <ng-template #itemTemplate let-node="node" let-index="index">
@@ -47,15 +48,15 @@
             </div>
           </ng-template>
           <ng-template #actionTemplate let-node="node" let-index="index">
-            
-          </ng-template>
+            <pfng-action class="list-pf-actions"
+            [config]="actionConfig"
+            (onActionSelect)="handleAction($event, node)">
+                        </pfng-action>
+          </ng-template>-->
         </pfng-tree-list>
       </div>
     </div>
   </div>
 
-  <pfng-action class="list-pf-actions"
-  [config]="actionConfig"
-  (onActionSelect)="handleAction($event, node)">
-              </pfng-action>
+  
   
